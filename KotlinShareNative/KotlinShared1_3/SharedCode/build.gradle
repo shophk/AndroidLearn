@@ -22,6 +22,11 @@ kotlin {
         androidMain.dependencies {
             api 'org.jetbrains.kotlin:kotlin-stdlib'
         }
+
+        iosMain.dependencies{
+            api 'org.jetbrains.kotlin:kotlin-stdlib'
+
+        }
     }
 }
 
@@ -48,3 +53,4 @@ task packForXCode(type: Sync) {
     }
 }
 tasks.build.dependsOn packForXCode
+
