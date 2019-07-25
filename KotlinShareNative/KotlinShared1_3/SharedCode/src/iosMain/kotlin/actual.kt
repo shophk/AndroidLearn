@@ -1,8 +1,7 @@
 package org.kotlin.mpp.mobile
 
 import platform.UIKit.UIDevice
-
-
+//import io.ktor.*
 actual fun platformName(): String {
 
     return UIDevice.currentDevice.systemName() +

@@ -24,19 +24,26 @@
         android:layout_gravity="center_vertical"
         tools:context=".MainActivity">
 
+
+    <!--The 'app' namespace is explained in detail. See other resources
+    for explanation.-->
+    <!--app:srcCompat="@drawable/empty_dice"-->
+
+
     <ImageView
             android:id="@+id/dice_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/empty_dice"
-            tools:src="@drawable/dice_1"/>
+            tools:src="@drawable/dice_1"
+            app:srcCompat="@drawable/empty_dice"/>
+
 
     <Button
             android:id="@+id/roll_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/roll_label" />
+            android:text="@string/roll_label"/>
 
 </LinearLayout>

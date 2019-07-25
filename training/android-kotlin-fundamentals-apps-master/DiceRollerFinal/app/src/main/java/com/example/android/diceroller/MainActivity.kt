@@ -40,7 +40,10 @@ class MainActivity : AppCompatActivity() {
         // Get the Button view from the layout and assign a click
         // listener to it.
         val rollButton: Button = findViewById(R.id.roll_button)
-        rollButton.setOnClickListener { rollDice() }
+        rollButton.setOnClickListener {
+            rollDice()
+        Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT)
+        }
         diceImage = findViewById(R.id.dice_image)
     }
 

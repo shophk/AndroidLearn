@@ -1,6 +1,7 @@
 apply plugin: 'kotlin-multiplatform'
-
+ext.ktor_version = '1.2.2'
 kotlin {
+
     targets {
         final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos") \
                               ? presets.iosArm64 : presets.iosX64
@@ -14,20 +15,29 @@ kotlin {
         fromPreset(presets.jvm, 'android')
     }
 
+
+
     sourceSets {
         commonMain.dependencies {
             api 'org.jetbrains.kotlin:kotlin-stdlib-common'
+            implementation("io.ktor:ktor-client-core:1.2.2")
+
         }
 
         androidMain.dependencies {
             api 'org.jetbrains.kotlin:kotlin-stdlib'
+            implementation("io.ktor:ktor-client-android:$ktor_version")
+
         }
 
         iosMain.dependencies{
             api 'org.jetbrains.kotlin:kotlin-stdlib'
+            implementation("io.ktor:ktor-client-ios:1.2.2")
 
         }
     }
+
+
 }
 
 // workaround for https://youtrack.jetbrains.com/issue/KT-27170

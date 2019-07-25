@@ -5,6 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+
     compileSdkVersion 28
     buildToolsVersion "29.0.0"
     defaultConfig {
@@ -23,6 +24,8 @@ android {
     }
 }
 
+ext.kotlin_version = '1.3.40'
+
 dependencies {
     implementation project(':SharedCode')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -32,4 +35,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
 }
